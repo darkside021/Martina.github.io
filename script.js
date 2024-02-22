@@ -12,6 +12,18 @@ function aggiungiFrase() {
         document.getElementById('nuovaFrase').value = "";
     }
 }
+    // Funzione per colorare le parole specifiche
+    function colorSpecificWords() {
+        const phraseDisplay = document.getElementById('phrase-display');
+        const wordsToColor = ['Martina', 'tiara', 'anima', 'mirata', 'mantra', 'amati', 'amanti', 'amarti'];
+        const regex = new RegExp(`\\b(${wordsToColor.join('|')})\\b`, 'gi');
+
+        phraseDisplay.innerHTML = phraseDisplay.innerHTML.replace(regex, '<span style="color: red;">$1</span>');
+    }
+
+    // Chiama la funzione colorSpecificWords quando la pagina è completamente caricata
+    window.onload = colorSpecificWords;
+
 // Funzione per capitalizzare le parole
 function capitalizeWords(str) {
     return str.replace(/\b\w/g, function(match, index, fullStr) {
@@ -135,3 +147,15 @@ function unzoom() {
     setTimeout(() => {
         addButton();
     },  15000);
+
+// Funzione per colorare le parole specifiche
+function colorSpecificWords() {
+    const phraseDisplay = document.getElementById('phrase-display');
+    const wordsToColor = ['Martina', 'tiara', 'anima', 'mirata', 'mantra', 'amati', 'amanti', 'amarti'];
+    const regex = new RegExp(`\\b(${wordsToColor.join('|')})\\b`, 'gi');
+
+    phraseDisplay.innerHTML = phraseDisplay.innerHTML.replace(regex, '<span style="color: red;">$1</span>');
+}
+
+// Chiama la funzione colorSpecificWords quando la pagina è completamente caricata
+window.onload = colorSpecificWords;
