@@ -18,20 +18,21 @@
 </head>
 
 <body>
-
-    <!--header section starts -->
     <section class="header">
-    <a href="home.html" class="logo"><div class="message">Il sito fatto apposta per te <span class="heart">♥</span></div></a>
-<nav class="navbar">
+        <a href="home.html" class="logo">
+            <div class="message">Il sito fatto apposta per te <span class="heart">♥</span></div>
+        </a>
+        <nav class="navbar">
             <a href="home.html">home</a>
-            
         </nav>
         <div id="menu-btn" class="fas fa-bars"></div>
     </section>
-        
-<!-- Area dove visualizzare le frasi predefinite -->
-<div id="phrase-display" class="phrase-display">
-    <!-- Aggiungi qui le frasi che vuoi mostrare -->
+
+    <!-- Contenitore principale diviso in due colonne -->
+    <div class="main-container">
+        <!-- Colonna delle frasi -->
+        <div class="phrases-column">
+            <div id="phrase-display" class="phrase-display">
     <p style="color: #5620a0; font-size: 25px;">Lo sai che della parola Martina, non esiste nessun vero anagramma?</p>
     <p style="color: #5620a0; font-size: 21px;">Sì, non avrai il copyright sul nome..</p>
     <p style="color: #5620a0; font-size: 21px;">..ma qualcosa pure vorrà dire</p>
@@ -47,9 +48,15 @@
     <p style="color: #5620a0; font-size: 36px;">Amanti, quello che potremmo essere "</p>
 
 
-    <!-- ... altre frasi ... -->
-</div>
-
+            </div>
+        </div>
+        <!-- Colonna dell'immagine -->
+        <div class="image-column">
+            <div class="right-image-container">
+                <img src="../immagini/Blah_blah_blah.jpg" alt="Why not?">
+            </div>
+        </div>
+    </div>
 
     <!-- swiper js link -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
