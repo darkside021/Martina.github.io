@@ -22,7 +22,14 @@ function capitalizeWords(str) {
         }
     });
 }
+    function addElement() {
+        const element = document.createElement('div');
+        element.textContent = 'Test';
+        document.getElementById('dynamic-content').appendChild(element);
+    }
 
+    // Chiama la funzione addElement immediatamente
+    addElement();
 // Event listener per l'input che capitalizza le parole mentre si scrivono
 document.getElementById('phrase-input').addEventListener('input', function() {
     this.value = capitalizeWords(this.value);
