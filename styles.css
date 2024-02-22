@@ -127,7 +127,20 @@ section{
     text-align: center;
     border-radius:  5px;
 }
+.right-image-container {
+    position: fixed;
+    right:  0;
+    top:  0;
+    width:  50%; /* Puoi regolare questa larghezza a seconda delle tue esigenze */
+    height:  100vh; /* Questo fa sì che l'immagine occupi l'intera altezza della viewport */
+    overflow: hidden; /* Nasconde qualsiasi parte dell'immagine che supera i limiti del contenitore */
+}
 
+.right-image-container img {
+    width:  100%;
+    height:  100%;
+    object-fit: cover; /* Questo fa sì che l'immagine copra completamente il contenitore senza distorsione */
+}
 .discover-button {
     display: inline-block;
     padding:  10px  20px;
