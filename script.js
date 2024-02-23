@@ -159,3 +159,23 @@ function colorSpecificWords() {
 
 // Chiama la funzione colorSpecificWords quando la pagina è completamente caricata
 window.onload = colorSpecificWords;
+// Ottieni tutti gli elementi delle frecce
+var arrowIcons = document.querySelectorAll('.arrow-icon');
+
+// Aggiungi un listener per l'evento click su tutte le frecce
+arrowIcons.forEach(function(arrowIcon) {
+    arrowIcon.addEventListener('click', function() {
+        // Trova l'immagine associata a questa freccia
+        var imageContainer = arrowIcon.parentElement.nextElementSibling;
+        
+        // Controlla se l'immagine è già visibile
+        var isVisible = imageContainer.style.display !== 'none';
+
+        // Se l'immagine è visibile, nascondila, altrimenti mostrala
+        if (isVisible) {
+            imageContainer.style.display = 'none';
+        } else {
+            imageContainer.style.display = 'block';
+        }
+    });
+});
